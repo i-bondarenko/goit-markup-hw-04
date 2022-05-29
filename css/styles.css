@@ -103,12 +103,14 @@ header {
   padding: 0;
   border: 0;
   margin-right: 10px;
-  fill: var(--main-text-color);
+  fill: currentColor;
 }
-.contacts .icon:hover {
+.contacts .icon:hover,
+.contacts .icon:focus {
   fill: var(--accent-color);
 }
-.contacts .item:hover {
+.contacts .item:hover,
+.contacts .item:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -232,23 +234,15 @@ header {
 .benefits .item:nth-child(4n) {
   margin-right: 0;
 }
-.benefits .item::before {
-  display: block;
-  height: 120px;
-  margin-bottom: 30px;
-  content: ' ';
-  outline: 1px solid red;
-}
 .section .benefits {
   margin-top: 0;
   margin-bottom: 0;
 }
-.icon-antenna {
+.benefits .icon {
+  width: 270px;
   height: 120px;
+  padding: 25px 100px;
   background-color: #f5f4fa;
-  background-image: url('../images/antenna1.png');
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .benefits .title {
@@ -324,11 +318,41 @@ header {
 }
 .about-team .position {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
   line-height: 1.19;
   text-align: center;
 }
-
+.team-icons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 32px;
+  margin-right: 32px;
+}
+.team-icons .item-social-media {
+  margin-right: 10px;
+}
+.team-icons .item-social-media:nth-child(4n) {
+  margin-right: 0;
+}
+.team-icons .media {
+  color: var(--main-text-color);
+  display: inline-block;
+  align-items: center;
+}
+.team-icons .icon {
+  fill: currentColor;
+  padding: 12px;
+}
+.team-icons .icon:hover,
+.team-icons .icon:focus {
+  fill: var(--second-accent-color);
+  background: var(--accent-color);
+  border-radius: 25%;
+}
+/* Clients */
+.our-clients .icon {
+  fill: currentColor;
+}
 /* Футер */
 
 footer {
