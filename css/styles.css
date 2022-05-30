@@ -243,6 +243,7 @@ header {
   height: 120px;
   padding: 25px 100px;
   background-color: #f5f4fa;
+  margin-bottom: 30px;
 }
 
 .benefits .title {
@@ -328,37 +329,70 @@ header {
   margin-left: 32px;
   margin-right: 32px;
 }
-.team-icons .item-social-media {
+.team-icons .item-social {
   margin-right: 10px;
 }
-.team-icons .item-social-media:nth-child(4n) {
+.team-icons .item-social:nth-child(4n) {
   margin-right: 0;
 }
 .team-icons .media {
-  color: var(--main-text-color);
-  display: inline-block;
+  display: block;
   align-items: center;
-}
-.team-icons .icon {
-  fill: currentColor;
+  width: 44px;
+  height: 44px;
   padding: 12px;
+  border-radius: 50%;
+  fill: #afb1b8;
 }
-.team-icons .icon:hover,
-.team-icons .icon:focus {
+
+.team-icons .media:hover,
+.team-icons .media:focus {
+  background-color: var(--accent-color);
   fill: var(--second-accent-color);
-  background: var(--accent-color);
-  border-radius: 25%;
 }
+
 /* Clients */
-.our-clients .icon {
-  fill: currentColor;
+.clients .section-title {
+  margin-bottom: 50px;
 }
+.our-clients {
+  display: flex;
+}
+.our-clients .item {
+  border: 1px solid #afb1b8;
+  margin-right: 30px;
+}
+
+.our-clients .item:nth-child(6n) {
+  margin-right: 0;
+}
+.clients-link {
+  display: block;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  fill: #afb1b8;
+}
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
 /* Футер */
 
 footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--footer-background-color);
+}
+.footer {
+  display: flex;
+  align-items: baseline;
+}
+.contact-info {
+  margin-right: 70px;
 }
 .name.studio {
   display: block;
@@ -402,6 +436,35 @@ footer {
 .mail:hover,
 .mail:focus {
   color: var(--accent-color);
+}
+.join {
+  color: var(--second-accent-color);
+  text-transform: uppercase;
+  line-height: 1.14;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.social-media {
+  display: flex;
+  flex-wrap: wrap;
+}
+.social-media .item:not(:last-child) {
+  margin-right: 10px;
+}
+.media-link {
+  display: block;
+  align-items: center;
+  fill: var(--second-accent-color);
+  width: 44px;
+  height: 44px;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.media-link:hover,
+.media-link:focus {
+  background-color: var(--accent-color);
 }
 
 /* Портфолио */
